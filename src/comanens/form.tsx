@@ -11,7 +11,7 @@ export function From(){
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ id, name, price, arrivedate: arrive })
+            body: JSON.stringify({ id: id,name: name,price: price, arrivedate: arrive })
         })
     }
         catch{
@@ -22,13 +22,13 @@ export function From(){
     return<>
         <form onSubmit={add}>
             <label htmlFor="id">id:</label>
-            <input className="id"></input>
+            <input className="id" type="number"></input>
             <label htmlFor="name">leiras:</label>
             <input className="name"></input>
             <label htmlFor="price">  price:</label>
-            <input className="price"></input>
+            <input className="price" type="number"></input>
             <label htmlFor="arrive">  arrivedate:</label>
-            <input className="arrive"></input>
+            <input className="arrive" type="date"></input>
             <input type="submit"></input>
 
         </form>
